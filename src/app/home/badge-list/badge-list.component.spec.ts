@@ -1,22 +1,22 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { StepsListComponent } from './steps-list.component';
+import { BadgeListComponent } from './badge-list.component';
 
-describe('StepsListComponent', () => {
-  let component: StepsListComponent;
-  let fixture: ComponentFixture<StepsListComponent>;
+describe('BadgeListComponent', () => {
+  let component: BadgeListComponent;
+  let fixture: ComponentFixture<BadgeListComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ StepsListComponent ],
+      declarations: [ BadgeListComponent ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(StepsListComponent);
+    fixture = TestBed.createComponent(BadgeListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
