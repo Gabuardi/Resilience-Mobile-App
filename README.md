@@ -10,4 +10,4 @@ The mobile client for the resilience application. Made with Angular - Ionic -
 | ionic build -prod  | Build the app with production mode |
 
 # Preview
-![](https://i.imgur.com/ydwXy42.png)
+![](https://i.imgur.com/NpbRJ0L.png)
