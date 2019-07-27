@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { HomePage } from './home.page';
 import {CommunityResilienceContentComponent} from './community-resilience-content/community-resilience-content.component';
 import {ProgressBarComponent} from './community-resilience-content/progress-bar/progress-bar.component';
+import {BadgeListComponent} from './badge-list/badge-list.component';
 
 @NgModule({
   imports: [
@@ -20,7 +21,7 @@ import {ProgressBarComponent} from './community-resilience-content/progress-bar/
       }
     ])
   ],
-  declarations: [HomePage, CommunityResilienceContentComponent, ProgressBarComponent]
+  declarations: [HomePage, CommunityResilienceContentComponent, ProgressBarComponent, BadgeListComponent]
 })
 
 export class HomePageModule {}

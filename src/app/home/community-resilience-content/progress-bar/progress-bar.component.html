@@ -14,13 +14,7 @@
 
             <!-- COMPLETE INDICATOR -->
             <div id="progress-bar-complete-indicator">
-                <ion-icon class="badge" name="checkmark-circle"></ion-icon>
-                <ion-icon class="badge" name="checkmark-circle"></ion-icon>
-                <ion-icon class="badge" name="checkmark-circle"></ion-icon>
-                <ion-icon class="badge" name="checkmark-circle"></ion-icon>
-                <ion-icon class="badge" name="checkmark-circle"></ion-icon>
-                <ion-icon class="badge" name="checkmark-circle"></ion-icon>
-                <ion-icon class="badge" name="checkmark-circle"></ion-icon>
+                <ion-icon *ngFor="let badge of BADGES" class="badge" [name]="badge.icon"></ion-icon>
             </div>
 
         </div>

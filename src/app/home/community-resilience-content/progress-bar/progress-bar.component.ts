@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {badges} from './badges';
+import {ProgressBarBadge} from '../../../interfaces/progress-bar-badge';
 
 @Component({
   selector: 'app-progress-bar',
@@ -8,10 +9,8 @@ import {badges} from './badges';
 })
 export class ProgressBarComponent implements OnInit {
 
-  constructor() {
-    console.log(badges);
-  }
+  BADGES: ProgressBarBadge[] = badges;
 
   ngOnInit() {}
 
-}
+} // COMPONENT ENDS
