@@ -11,4 +11,4 @@ export class PhaseIndicatorComponent implements OnInit {
 
   ngOnInit() {}
 
-}
+} // COMPONENT ENDS
