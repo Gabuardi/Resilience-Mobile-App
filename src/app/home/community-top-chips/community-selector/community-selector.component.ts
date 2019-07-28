@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {PickerController} from '@ionic/angular';
-import {LocationsProviderService} from '../../services/locations-provider.service';
+import {LocationsProviderService} from '../../../services/locations-provider.service';
 
 @Component({
     selector: 'app-community-selector',

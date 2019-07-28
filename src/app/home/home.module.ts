@@ -8,7 +8,7 @@ import { HomePage } from './home.page';
 import {CommunityResilienceContentComponent} from './community-resilience-content/community-resilience-content.component';
 import {ProgressBarComponent} from './community-resilience-content/progress-bar/progress-bar.component';
 import {BadgeListComponent} from './badge-list/badge-list.component';
-import {CommunitySelectorComponent} from './community-selector/community-selector.component';
+import {CommunitySelectorComponent} from './community-top-chips/community-selector/community-selector.component';
 
 @NgModule({
   imports: [
