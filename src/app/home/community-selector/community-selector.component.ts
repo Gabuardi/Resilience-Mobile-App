@@ -10,7 +10,7 @@ import {LocationsProviderService} from '../../services/locations-provider.servic
 export class CommunitySelectorComponent implements OnInit {
 
     constructor(private pickerCtrl: PickerController, private locationsProvider: LocationsProviderService) {
-        console.log(locationsProvider.getProvinces());
+        console.log(locationsProvider.getCities());
     }
 
     ngOnInit() {
