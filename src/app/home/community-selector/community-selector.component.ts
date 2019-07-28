@@ -7,38 +7,38 @@ import {LocationsProviderService} from '../../services/locations-provider.servic
     templateUrl: './community-selector.component.html',
     styleUrls: ['./community-selector.component.scss'],
 })
-export class CommunitySelectorComponent implements OnInit {
+export class CommunitySelectorComponent {
+
+    // ------------------------------------------------------------------
+    // COMPONENT PROPERTIES
+    // ------------------------------------------------------------------
+    buttons = [{text: 'Cancel', role: 'cancel'}, {text: 'Done'}];
+
+    // ------------------------------------------------------------------
 
     constructor(private pickerCtrl: PickerController, private locationsProvider: LocationsProviderService) {
-        console.log(locationsProvider.getCities());
     }
 
-    ngOnInit() {
-    }
+    // ------------------------------------------------------------------
+    // METHOD -> BUILD PICKER COLUMN OPTIONS OBJECT AND RETURN IT
+    // ------------------------------------------------------------------
+    static buildColumnOptions(columnName: string, optionsObject) {
+        const optionsList = [];
 
-    async showPicker() {
-        let opts = {
-            buttons: [
-                {
-                    text: 'Cancel',
-                    role: 'cancel'
-                },
-                {
-                    text: 'Done'
-                }
-            ],
-            columns: [
-                {
-                    name: 'framework',
-                    options: [
-                        {text: 'Angular', value: 'A'},
-                        {text: 'Vue', value: 'B'},
-                        {text: 'React', value: 'C'}
-                    ]
-                }
-            ]
+        // BUILD OPTION OBJECT
+        for (const option of optionsObject) {
+            optionsList.push({text: option, value: option});
+        } // for ENDS
+
+        return {name: columnName, options: optionsList};
+    } // ENDS
+
+    async showProvincesPicker() {
+        const opts = {
+            buttons: this.buttons,
+            columns: [CommunitySelectorComponent.buildColumnOptions('Provinces', this.locationsProvider.getProvinces())]
         };
-        let picker = await this.pickerCtrl.create(opts);
+        const picker = await this.pickerCtrl.create(opts);
         picker.present();
         picker.onDidDismiss().then(async data => {
             this.showAnotherPicker();

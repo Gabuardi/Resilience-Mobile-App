@@ -68,6 +68,13 @@ export class LocationsProviderService {
                 .get(`${this.URL}/${province}`)
                 .subscribe(response => {
                     this.cities[province] = response;
+
+                    // LOAD TOWNS
+                    for (const city of this.cities[province]) {
+                        console.warn(city);
+                        this.loadTowns(province, city);
+                    } // FOR ENDS
+
                     resolve(true);
                 });
         });
@@ -85,9 +92,8 @@ export class LocationsProviderService {
 
                     // LOAD CITIES
                     for (const province of this.provinces) {
-                        console.warn(province);
                         this.loadCities(province);
-                    }
+                    } // FOR ENDS
 
                     resolve(true);
                 });
