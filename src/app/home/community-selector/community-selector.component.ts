@@ -33,46 +33,44 @@ export class CommunitySelectorComponent {
         return {name: columnName, options: optionsList};
     } // ENDS
 
+    // ------------------------------------------------------------------
+    // METHOD -> SHOW A PICKER WITH PROVINCES OPTIONS
+    // ------------------------------------------------------------------
     async showProvincesPicker() {
+        // SET PICKER OPTIONS
         const opts = {
             buttons: this.buttons,
-            columns: [CommunitySelectorComponent.buildColumnOptions('Provinces', this.locationsProvider.getProvinces())]
+            columns: [CommunitySelectorComponent.buildColumnOptions('provinces', this.locationsProvider.getProvinces())]
+        };
+
+        // CREATE PICKER
+        const picker = await this.pickerCtrl.create(opts);
+        picker.present();
+        picker.onDidDismiss().then(async data => {
+
+            // GET SELECTED OPTION
+            const provinceColumn = await picker.getColumn('provinces');
+            const selectedProvince = provinceColumn.options[provinceColumn.selectedIndex].value;
+
+            // CALL NEXT PICKER
+            this.showCitiesPicker(selectedProvince);
+        });
+    } // ENDS
+
+    // ------------------------------------------------------------------
+    // METHOD -> SHOW A PICKER WITH CITIES OF A PROVINCE OPTIONS
+    // ------------------------------------------------------------------
+    async showCitiesPicker(province) {
+        const opts = {
+            buttons: this.buttons,
+            columns: [CommunitySelectorComponent.buildColumnOptions('Cities', this.locationsProvider.getProvinceCities(province))]
         };
         const picker = await this.pickerCtrl.create(opts);
         picker.present();
         picker.onDidDismiss().then(async data => {
-            this.showAnotherPicker();
+            // this.showAnotherPicker();
         });
-    }
+    } // ENDS
 
-
-    async showAnotherPicker() {
-        let opts = {
-            buttons: [
-                {
-                    text: 'Cancel',
-                    role: 'cancel'
-                },
-                {
-                    text: 'Done'
-                }
-            ],
-            columns: [
-                {
-                    name: 'Team',
-                    options: [
-                        {text: 'Fnatic', value: 'A'},
-                        {text: 'G2 Esports', value: 'B'},
-                        {text: 'Origen', value: 'C'}
-                    ]
-                }
-            ]
-        };
-        let picker = await this.pickerCtrl.create(opts);
-        picker.present();
-        picker.onDidDismiss().then(async data => {
-            console.log(data);
-        });
-    }
 
 } // COMPONENT ENDS

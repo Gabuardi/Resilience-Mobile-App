@@ -1,7 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {environment} from '../../environments/environment';
-import {forEach} from '@angular-devkit/schematics';
 
 @Injectable({
     providedIn: 'root'
@@ -31,10 +30,10 @@ export class LocationsProviderService {
 
 
     // ---------------------------------------------------
-    // GET -> RETURN CITIES PROPERTY
+    // GET -> RETURN PROVINCE CITIES PROPERTY
     // ---------------------------------------------------
-    public getCities() {
-        return this.cities;
+    public getProvinceCities(province: string) {
+        return this.cities[province];
     } // ENDS
 
 
