@@ -12,6 +12,7 @@ export class CommunitySelectorComponent {
     // ------------------------------------------------------------------
     // COMPONENT PROPERTIES
     // ------------------------------------------------------------------
+    communityName = '';
     buttons = [{text: 'Cancel', role: 'cancel'}, {text: 'Done'}];
 
     // ------------------------------------------------------------------
@@ -37,14 +38,22 @@ export class CommunitySelectorComponent {
     // METHOD -> SHOW A PICKER WITH TOWNS OF A CITY OPTIONS
     // ------------------------------------------------------------------
     async showTownsPicker(province, city) {
+        // SET PICKER OPTIONS
         const opts = {
             buttons: this.buttons,
             columns: [CommunitySelectorComponent.buildColumnOptions('towns', this.locationsProvider.getCityTown(province, city))]
         };
+
+        // CREATE PICKER
         const picker = await this.pickerCtrl.create(opts);
         picker.present();
+
+        // DISMISS PICKER EVENT
         picker.onDidDismiss().then(async data => {
-            // this.showAnotherPicker();
+
+            // GET SELECTED OPTION AND ASSIGN TO COMPONENT VARIABLE
+            const townsColumns = await picker.getColumn('towns');
+            this.communityName = townsColumns.options[townsColumns.selectedIndex].value;
         });
     } // ENDS
 
