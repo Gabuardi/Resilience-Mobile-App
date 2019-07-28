@@ -11,4 +11,4 @@ export class CommunitySelectorComponent implements OnInit {
 
   ngOnInit() {}
 
-}
+} // COMPONENT ENDS
