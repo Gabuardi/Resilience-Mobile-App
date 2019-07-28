@@ -14,7 +14,7 @@ export class LocationsProviderService {
     private URL = `${environment.API}/towns`;
     private provinces;
     private cities = {};
-    private towns = {};
+    private towns = {'SAN JOSE': {}, ALAJUELA: {}, HEREDIA: {}, CARTAGO: {}, GUANACASTE: {}, PUNTARENAS: {}, LIMON: {}};
 
     // ---------------------------------------------------
 
@@ -38,10 +38,10 @@ export class LocationsProviderService {
 
 
     // ---------------------------------------------------
-    // GET -> RETURN TOWNS PROPERTY
+    // GET -> RETURN TOWNS OF CITY
     // ---------------------------------------------------
-    public getTowns() {
-        return this.towns;
+    public getCityTown(province: string, city: string) {
+        return this.towns[province][city];
     } // ENDS
 
     // ---------------------------------------------------
@@ -52,7 +52,8 @@ export class LocationsProviderService {
             this.http
                 .get(`${this.URL}/${province}/${city}`)
                 .subscribe(response => {
-                    this.cities[province][city] = response;
+                    console.warn(response);
+                    this.towns[province][city] = response;
                     resolve(true);
                 });
         });
@@ -70,7 +71,7 @@ export class LocationsProviderService {
 
                     // LOAD TOWNS
                     for (const city of this.cities[province]) {
-                        console.warn(city);
+                        console.error(city);
                         this.loadTowns(province, city);
                     } // FOR ENDS
 

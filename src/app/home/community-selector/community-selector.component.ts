@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {PickerController} from '@ionic/angular';
 import {LocationsProviderService} from '../../services/locations-provider.service';
 
@@ -34,6 +34,47 @@ export class CommunitySelectorComponent {
     } // ENDS
 
     // ------------------------------------------------------------------
+    // METHOD -> SHOW A PICKER WITH TOWNS OF A CITY OPTIONS
+    // ------------------------------------------------------------------
+    async showTownsPicker(province, city) {
+        const opts = {
+            buttons: this.buttons,
+            columns: [CommunitySelectorComponent.buildColumnOptions('towns', this.locationsProvider.getCityTown(province, city))]
+        };
+        const picker = await this.pickerCtrl.create(opts);
+        picker.present();
+        picker.onDidDismiss().then(async data => {
+            // this.showAnotherPicker();
+        });
+    } // ENDS
+
+    // ------------------------------------------------------------------
+    // METHOD -> SHOW A PICKER WITH CITIES OF A PROVINCE OPTIONS
+    // ------------------------------------------------------------------
+    async showCitiesPicker(province) {
+        // SET PICKER OPTIONS
+        const opts = {
+            buttons: this.buttons,
+            columns: [CommunitySelectorComponent.buildColumnOptions('cities', this.locationsProvider.getProvinceCities(province))]
+        };
+
+        // CREATE PICKER
+        const picker = await this.pickerCtrl.create(opts);
+        picker.present();
+
+        // DISMISS PICKER EVENT
+        picker.onDidDismiss().then(async data => {
+
+            // GET SELECTED OPTION
+            const citiesColumn = await picker.getColumn('cities');
+            const selectedCity = citiesColumn.options[citiesColumn.selectedIndex].value;
+
+            // CALL NEXT PICKER
+            this.showTownsPicker(province, selectedCity);
+        });
+    } // ENDS
+
+    // ------------------------------------------------------------------
     // METHOD -> SHOW A PICKER WITH PROVINCES OPTIONS
     // ------------------------------------------------------------------
     async showProvincesPicker() {
@@ -46,6 +87,8 @@ export class CommunitySelectorComponent {
         // CREATE PICKER
         const picker = await this.pickerCtrl.create(opts);
         picker.present();
+
+        // DISMISS PICKER EVENT
         picker.onDidDismiss().then(async data => {
 
             // GET SELECTED OPTION
@@ -56,21 +99,5 @@ export class CommunitySelectorComponent {
             this.showCitiesPicker(selectedProvince);
         });
     } // ENDS
-
-    // ------------------------------------------------------------------
-    // METHOD -> SHOW A PICKER WITH CITIES OF A PROVINCE OPTIONS
-    // ------------------------------------------------------------------
-    async showCitiesPicker(province) {
-        const opts = {
-            buttons: this.buttons,
-            columns: [CommunitySelectorComponent.buildColumnOptions('Cities', this.locationsProvider.getProvinceCities(province))]
-        };
-        const picker = await this.pickerCtrl.create(opts);
-        picker.present();
-        picker.onDidDismiss().then(async data => {
-            // this.showAnotherPicker();
-        });
-    } // ENDS
-
 
 } // COMPONENT ENDS
