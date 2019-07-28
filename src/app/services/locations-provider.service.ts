@@ -43,9 +43,23 @@ export class LocationsProviderService {
     } // ENDS
 
     // ---------------------------------------------------
-    // METHOD -> RETURN TOWNS PROPERTY
+    // METHOD -> LOAD PROVINCES AND SAVE IT
     // ---------------------------------------------------
     loadProvinces() {
+        return new Promise((resolve) => {
+            this.http
+                .get('https://resilapp.mybluemix.net/api/towns/provinces')
+                .subscribe(response => {
+                    this.provinces = response;
+                    resolve(true);
+                });
+        });
+    }
+
+    // ---------------------------------------------------
+    // METHOD -> LOAD SPECIFIC CITY AND SAVE IT
+    // ---------------------------------------------------
+    loadCitie(city: string) {
         return new Promise((resolve) => {
             this.http
                 .get('https://resilapp.mybluemix.net/api/towns/provinces')
