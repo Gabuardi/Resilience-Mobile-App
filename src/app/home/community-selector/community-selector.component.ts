@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {PickerController} from '@ionic/angular';
 
 @Component({
   selector: 'app-community-selector',
@@ -7,8 +8,67 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CommunitySelectorComponent implements OnInit {
 
-  constructor() { }
+  constructor(private pickerCtrl: PickerController) { }
 
   ngOnInit() {}
+
+  async showPicker() {
+    let opts = {
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel'
+        },
+        {
+          text: 'Done'
+        }
+      ],
+      columns: [
+        {
+          name: 'framework',
+          options: [
+            { text: 'Angular', value: 'A' },
+            { text: 'Vue', value: 'B' },
+            { text: 'React', value: 'C' }
+          ]
+        }
+      ]
+    };
+    let picker = await this.pickerCtrl.create(opts);
+    picker.present();
+    picker.onDidDismiss().then(async data => {
+      this.showAnotherPicker();
+    });
+  }
+
+
+  async showAnotherPicker() {
+    let opts = {
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel'
+        },
+        {
+          text: 'Done'
+        }
+      ],
+      columns: [
+        {
+          name: 'Team',
+          options: [
+            { text: 'Fnatic', value: 'A' },
+            { text: 'G2 Esports', value: 'B' },
+            { text: 'Origen', value: 'C' }
+          ]
+        }
+      ]
+    };
+    let picker = await this.pickerCtrl.create(opts);
+    picker.present();
+    picker.onDidDismiss().then(async data => {
+      console.log(data);
+    });
+  }
 
 } // COMPONENT ENDS
