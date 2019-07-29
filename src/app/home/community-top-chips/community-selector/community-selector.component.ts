@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 import {PickerController} from '@ionic/angular';
 import {LocationsProviderService} from '../../../services/locations-provider.service';
 
@@ -14,6 +14,8 @@ export class CommunitySelectorComponent {
     // ------------------------------------------------------------------
     communityName = '';
     buttons = [{text: 'Cancel', role: 'cancel'}, {text: 'Done'}];
+    // OUTPUTS
+    @Output() communitySelected: EventEmitter<object> = new EventEmitter();
 
     // ------------------------------------------------------------------
 
@@ -33,6 +35,13 @@ export class CommunitySelectorComponent {
 
         return {name: columnName, options: optionsList};
     } // ENDS
+
+    // ------------------------------------------------------------------
+    // METHOD -> EMMIT AND EVENT WITH PROVINCE, CITY AND TOWN SELECTED
+    // ------------------------------------------------------------------
+    emmitEventCommunitySelected(province: string, city: string, town: string): void {
+        this.communitySelected.emit({province, city, town});
+    } // METHOD ENDS
 
     // ------------------------------------------------------------------
     // METHOD -> SHOW A PICKER WITH TOWNS OF A CITY OPTIONS
