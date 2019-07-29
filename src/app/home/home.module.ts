@@ -11,6 +11,7 @@ import {BadgeListComponent} from './badge-list/badge-list.component';
 import {CommunitySelectorComponent} from './community-top-chips/community-selector/community-selector.component';
 import {PhaseIndicatorComponent} from './community-top-chips/phase-indicator/phase-indicator.component';
 import {CommunityTopChipsComponent} from './community-top-chips/community-top-chips.component';
+import {CommunityBottomChipsComponent} from './community-bottom-chips/community-bottom-chips.component';
 
 @NgModule({
     imports: [
@@ -31,7 +32,8 @@ import {CommunityTopChipsComponent} from './community-top-chips/community-top-ch
         BadgeListComponent,
         ProgressBarComponent,
         CommunitySelectorComponent,
-        PhaseIndicatorComponent
+        PhaseIndicatorComponent,
+        CommunityBottomChipsComponent
     ]
 })
 
