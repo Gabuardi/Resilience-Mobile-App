@@ -1,16 +1,32 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {badges} from './badges';
 import {ProgressBarBadge} from '../../../interfaces/progress-bar-badge';
 
 @Component({
-  selector: 'app-progress-bar',
-  templateUrl: './progress-bar.component.html',
-  styleUrls: ['./progress-bar.component.scss'],
+    selector: 'app-progress-bar',
+    templateUrl: './progress-bar.component.html',
+    styleUrls: ['./progress-bar.component.scss'],
 })
-export class ProgressBarComponent implements OnInit {
+export class ProgressBarComponent {
 
-  BADGES: ProgressBarBadge[] = badges;
+    // ------------------------------------------------------------------
+    // COMPONENT PROPERTIES
+    // ------------------------------------------------------------------
+    resilenceProgress: string;
+    BADGES: ProgressBarBadge[] = badges;
+    // ------------------------------------------------------------------
 
-  ngOnInit() {}
+
+    // ------------------------------------------------------------------
+    // INPUT -> SET THE VALUE OF PROGRESS PROPERTY AND ROUND TO INTEGER
+    // ------------------------------------------------------------------
+    @Input()
+    set progress(value: number) {
+        // ROUND TO INTEGER
+        const roundedProgress = Math.round(value);
+
+        // CAST TO STRING AND ASSIGN TO COMPONENT PROPERTY
+        this.resilenceProgress = String(roundedProgress);
+    } // INPUT END
 
 } // COMPONENT ENDS
