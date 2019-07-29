@@ -1,14 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
-  selector: 'app-community-resilience-content',
-  templateUrl: './community-resilience-content.component.html',
-  styleUrls: ['./community-resilience-content.component.scss'],
+    selector: 'app-community-resilience-content',
+    templateUrl: './community-resilience-content.component.html',
+    styleUrls: ['./community-resilience-content.component.scss'],
 })
-export class CommunityResilienceContentComponent implements OnInit {
+export class CommunityResilienceContentComponent {
 
-  constructor() { }
+    // ------------------------------------------------------------------
+    // COMPONENT PROPERTIES
+    // ------------------------------------------------------------------
+    // INPUT
+    @Input() resilenceProgress: number;
+    // ------------------------------------------------------------------
 
-  ngOnInit() {}
-
-}
+} // COMPONENT ENDS
