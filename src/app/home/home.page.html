@@ -9,12 +9,12 @@
 <!-- CONTENT -->
 <ion-content>
 
-    <app-community-top-chips (communitySelected)="communitySelectedEventHandler($event)"></app-community-top-chips>
+    <app-community-top-chips [phase]="phase" (communitySelected)="communitySelectedEventHandler($event)"></app-community-top-chips>
 
     <!--------------  COMMUNITY RESILIENCE  --------------->
-    <app-community-resilience-content [resilienceProgress]="30"></app-community-resilience-content>
+    <app-community-resilience-content [resilienceProgress]="resilienceProgress"></app-community-resilience-content>
 
-    <app-community-bottom-chips></app-community-bottom-chips>
+    <app-community-bottom-chips [totalProgress]="resilienceProgress" [phaseProgress]="resilienceProgress"></app-community-bottom-chips>
 
     <ion-item-divider mode="md"></ion-item-divider>
 

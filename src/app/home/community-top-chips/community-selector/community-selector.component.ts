@@ -12,7 +12,7 @@ export class CommunitySelectorComponent {
     // ------------------------------------------------------------------
     // COMPONENT PROPERTIES
     // ------------------------------------------------------------------
-    communityName = '';
+    communityName = 'SELECT COMMUNITY';
     buttons = [{text: 'Cancel', role: 'cancel'}, {text: 'Done'}];
     // OUTPUTS
     @Output() communitySelected: EventEmitter<object> = new EventEmitter();

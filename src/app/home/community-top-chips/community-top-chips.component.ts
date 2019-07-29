@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Output} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 
 @Component({
     selector: 'app-community-top-chips',
@@ -10,6 +10,8 @@ export class CommunityTopChipsComponent {
     // ------------------------------------------------------------------
     // COMPONENT PROPERTIES
     // ------------------------------------------------------------------
+    // INPUTS
+    @Input() phase: number;
     // OUTPUTS
     @Output() communitySelected: EventEmitter<object> = new EventEmitter();
 

@@ -1,14 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-community-bottom-chips',
   templateUrl: './community-bottom-chips.component.html',
   styleUrls: ['./community-bottom-chips.component.scss'],
 })
-export class CommunityBottomChipsComponent implements OnInit {
+export class CommunityBottomChipsComponent {
 
-  constructor() { }
+  // ------------------------------------------------------------------
+  // COMPONENT PROPERTIES
+  // ------------------------------------------------------------------
+  // INPUTS
+  @Input() totalProgress: number;
+  @Input() phaseProgress: number;
+  // ------------------------------------------------------------------
 
-  ngOnInit() {}
-
-}
+} // COMPONENT ENDS
