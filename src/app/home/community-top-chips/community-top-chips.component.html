@@ -6,7 +6,7 @@
 
         <!-- COMMUNITY SELECTOR -->
         <ion-col>
-            <app-community-selector></app-community-selector>
+            <app-community-selector (communitySelected)="emmitEventCommunitySelected($event)" ></app-community-selector>
         </ion-col>
 
         <!-- PHASE INDICATOR -->

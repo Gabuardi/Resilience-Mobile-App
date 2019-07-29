@@ -63,6 +63,9 @@ export class CommunitySelectorComponent {
             // GET SELECTED OPTION AND ASSIGN TO COMPONENT VARIABLE
             const townsColumns = await picker.getColumn('towns');
             this.communityName = townsColumns.options[townsColumns.selectedIndex].value;
+
+            // EMMIT THE EVENT WITH SELECTED OPTION DATA
+            this.emmitEventCommunitySelected(province, city, this.communityName);
         });
     } // ENDS
 

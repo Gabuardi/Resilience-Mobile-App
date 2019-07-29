@@ -9,7 +9,7 @@
 <!-- CONTENT -->
 <ion-content>
 
-    <app-community-top-chips></app-community-top-chips>
+    <app-community-top-chips (communitySelected)="communitySelectedEventHandler($event)"></app-community-top-chips>
 
     <!--------------  COMMUNITY RESILIENCE  --------------->
     <app-community-resilience-content [resilienceProgress]="30"></app-community-resilience-content>

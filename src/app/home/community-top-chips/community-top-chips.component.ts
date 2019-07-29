@@ -1,14 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 
 @Component({
-  selector: 'app-community-top-chips',
-  templateUrl: './community-top-chips.component.html',
-  styleUrls: ['./community-top-chips.component.scss'],
+    selector: 'app-community-top-chips',
+    templateUrl: './community-top-chips.component.html',
+    styleUrls: ['./community-top-chips.component.scss'],
 })
-export class CommunityTopChipsComponent implements OnInit {
+export class CommunityTopChipsComponent {
 
-  constructor() { }
+    // ------------------------------------------------------------------
+    // COMPONENT PROPERTIES
+    // ------------------------------------------------------------------
+    // OUTPUTS
+    @Output() communitySelected: EventEmitter<object> = new EventEmitter();
 
-  ngOnInit() {}
+    // ------------------------------------------------------------------
 
-}
+    // ------------------------------------------------------------------
+    // METHOD -> EMMIT AND EVENT WITH PROVINCE, CITY AND TOWN SELECTED
+    // ------------------------------------------------------------------
+    emmitEventCommunitySelected(object): void {
+        this.communitySelected.emit(object);
+    } // METHOD ENDS
+
+} // COMPONENT ENDS
