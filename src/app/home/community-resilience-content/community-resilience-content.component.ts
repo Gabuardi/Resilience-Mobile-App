@@ -11,7 +11,7 @@ export class CommunityResilienceContentComponent {
     // COMPONENT PROPERTIES
     // ------------------------------------------------------------------
     // INPUT
-    @Input() resilenceProgress: number;
+    @Input() resilienceProgress: number;
     // ------------------------------------------------------------------
 
 } // COMPONENT ENDS

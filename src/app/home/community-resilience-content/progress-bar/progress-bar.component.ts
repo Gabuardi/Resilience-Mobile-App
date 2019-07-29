@@ -12,7 +12,7 @@ export class ProgressBarComponent {
     // ------------------------------------------------------------------
     // COMPONENT PROPERTIES
     // ------------------------------------------------------------------
-    resilenceProgress: string;
+    resilienceProgress: string;
     BADGES: ProgressBarBadge[] = badges;
     // ------------------------------------------------------------------
 
@@ -26,7 +26,7 @@ export class ProgressBarComponent {
         const roundedProgress = Math.round(value);
 
         // CAST TO STRING AND ASSIGN TO COMPONENT PROPERTY
-        this.resilenceProgress = String(roundedProgress);
+        this.resilienceProgress = String(roundedProgress);
     } // INPUT END
 
 } // COMPONENT ENDS

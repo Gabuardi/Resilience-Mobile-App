@@ -13,7 +13,7 @@
         <div id="progress-bar-container">
 
             <!-- COMPLETE INDICATOR -->
-            <div id="progress-bar-complete-indicator" >
+            <div id="progress-bar-complete-indicator" [ngClass]="resilienceProgress">
                 <ion-icon *ngFor="let badge of BADGES" class="badge" [ngClass]="badge.color" [name]="badge.icon"></ion-icon>
             </div>
 
