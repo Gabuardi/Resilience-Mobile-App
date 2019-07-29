@@ -1,5 +1,7 @@
 {
   "name": "Resilience-Mobile-App",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
