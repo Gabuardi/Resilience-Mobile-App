@@ -26,7 +26,7 @@ export class ProgressBarComponent {
         const roundedProgress = Math.round(value);
 
         // CAST TO STRING AND ASSIGN TO COMPONENT PROPERTY
-        this.resilienceProgress = String(roundedProgress);
+        this.resilienceProgress = `percent_${String(roundedProgress)}`;
     } // INPUT END
 
 } // COMPONENT ENDS
