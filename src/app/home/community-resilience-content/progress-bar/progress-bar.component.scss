@@ -18,7 +18,7 @@
   align-items: center;
   width: 2280px;
   height: 65px;
-  background: linear-gradient(to left, #dbdbdb 90%, #08c200 10%);
+  background: linear-gradient(to left, #dbdbdb 50%, #08c200 50%);
 }
 
 .progress-bar-controllers {
@@ -30,7 +30,428 @@
   color: white;
   border-radius: 50px;
   padding: 10px;
-  background-color: #c20100;
   margin-left: 35px;
   font-size: 40px;
+}
+
+.badge.blue {
+  background-color: #43acff;
+}
+
+.badge.lime {
+  background-color: #b0d524;
+}
+
+.badge.ambar {
+  background-color: #ffdc00;
+}
+
+.badge.wine {
+  background-color: #a50d67;
+}
+
+// PERCENT CLASSES
+
+.percent_0 {
+  background: linear-gradient(to left, #dbdbdb 100%, #08c200 0%);
+}
+
+.percent_1 {
+  background: linear-gradient(to left, #dbdbdb 99%, #08c200 1%);
+}
+
+.percent_2 {
+  background: linear-gradient(to left, #dbdbdb 98%, #08c200 2%);
+}
+
+.percent_3 {
+  background: linear-gradient(to left, #dbdbdb 97%, #08c200 3%);
+}
+
+.percent_4 {
+  background: linear-gradient(to left, #dbdbdb 96%, #08c200 4%);
+}
+
+.percent_5 {
+  background: linear-gradient(to left, #dbdbdb 95%, #08c200 5%);
+}
+
+.percent_6 {
+  background: linear-gradient(to left, #dbdbdb 94%, #08c200 6%);
+}
+
+.percent_7 {
+  background: linear-gradient(to left, #dbdbdb 93%, #08c200 7%);
+}
+
+.percent_8 {
+  background: linear-gradient(to left, #dbdbdb 92%, #08c200 8%);
+}
+
+.percent_9 {
+  background: linear-gradient(to left, #dbdbdb 91%, #08c200 9%);
+}
+
+.percent_10 {
+  background: linear-gradient(to left, #dbdbdb 90%, #08c200 10%);
+}
+
+.percent_11 {
+  background: linear-gradient(to left, #dbdbdb 89%, #08c200 11%);
+}
+
+.percent_12 {
+  background: linear-gradient(to left, #dbdbdb 88%, #08c200 12%);
+}
+
+.percent_13 {
+  background: linear-gradient(to left, #dbdbdb 87%, #08c200 13%);
+}
+
+.percent_14 {
+  background: linear-gradient(to left, #dbdbdb 86%, #08c200 14%);
+}
+
+.percent_15 {
+  background: linear-gradient(to left, #dbdbdb 85%, #08c200 15%);
+}
+
+.percent_16 {
+  background: linear-gradient(to left, #dbdbdb 84%, #08c200 16%);
+}
+
+.percent_17 {
+  background: linear-gradient(to left, #dbdbdb 83%, #08c200 17%);
+}
+
+.percent_18 {
+  background: linear-gradient(to left, #dbdbdb 82%, #08c200 18%);
+}
+
+.percent_19 {
+  background: linear-gradient(to left, #dbdbdb 81%, #08c200 19%);
+}
+
+.percent_20 {
+  background: linear-gradient(to left, #dbdbdb 80%, #08c200 20%);
+}
+
+.percent_21 {
+  background: linear-gradient(to left, #dbdbdb 79%, #08c200 21%);
+}
+
+.percent_22 {
+  background: linear-gradient(to left, #dbdbdb 78%, #08c200 22%);
+}
+
+.percent_23 {
+  background: linear-gradient(to left, #dbdbdb 77%, #08c200 23%);
+}
+
+.percent_24 {
+  background: linear-gradient(to left, #dbdbdb 76%, #08c200 24%);
+}
+
+.percent_25 {
+  background: linear-gradient(to left, #dbdbdb 75%, #08c200 25%);
+}
+
+.percent_26 {
+  background: linear-gradient(to left, #dbdbdb 74%, #08c200 26%);
+}
+
+.percent_27 {
+  background: linear-gradient(to left, #dbdbdb 73%, #08c200 27%);
+}
+
+.percent_28 {
+  background: linear-gradient(to left, #dbdbdb 72%, #08c200 28%);
+}
+
+.percent_29 {
+  background: linear-gradient(to left, #dbdbdb 71%, #08c200 29%);
+}
+
+.percent_30 {
+  background: linear-gradient(to left, #dbdbdb 70%, #08c200 30%);
+}
+
+.percent_31 {
+  background: linear-gradient(to left, #dbdbdb 69%, #08c200 31%);
+}
+
+.percent_32 {
+  background: linear-gradient(to left, #dbdbdb 68%, #08c200 32%);
+}
+
+.percent_33 {
+  background: linear-gradient(to left, #dbdbdb 67%, #08c200 33%);
+}
+
+.percent_34 {
+  background: linear-gradient(to left, #dbdbdb 66%, #08c200 34%);
+}
+
+.percent_35 {
+  background: linear-gradient(to left, #dbdbdb 65%, #08c200 35%);
+}
+
+.percent_36 {
+  background: linear-gradient(to left, #dbdbdb 64%, #08c200 36%);
+}
+
+.percent_37 {
+  background: linear-gradient(to left, #dbdbdb 63%, #08c200 37%);
+}
+
+.percent_38 {
+  background: linear-gradient(to left, #dbdbdb 62%, #08c200 38%);
+}
+
+.percent_39 {
+  background: linear-gradient(to left, #dbdbdb 61%, #08c200 39%);
+}
+
+.percent_40 {
+  background: linear-gradient(to left, #dbdbdb 60%, #08c200 40%);
+}
+
+.percent_41 {
+  background: linear-gradient(to left, #dbdbdb 59%, #08c200 41%);
+}
+
+.percent_42 {
+  background: linear-gradient(to left, #dbdbdb 58%, #08c200 42%);
+}
+
+.percent_43 {
+  background: linear-gradient(to left, #dbdbdb 57%, #08c200 43%);
+}
+
+.percent_44 {
+  background: linear-gradient(to left, #dbdbdb 56%, #08c200 44%);
+}
+
+.percent_45 {
+  background: linear-gradient(to left, #dbdbdb 55%, #08c200 45%);
+}
+
+.percent_46 {
+  background: linear-gradient(to left, #dbdbdb 54%, #08c200 46%);
+}
+
+.percent_47 {
+  background: linear-gradient(to left, #dbdbdb 53%, #08c200 47%);
+}
+
+.percent_48 {
+  background: linear-gradient(to left, #dbdbdb 52%, #08c200 48%);
+}
+
+.percent_49 {
+  background: linear-gradient(to left, #dbdbdb 51%, #08c200 49%);
+}
+
+.percent_50 {
+  background: linear-gradient(to left, #dbdbdb 50%, #08c200 50%);
+}
+
+.percent_51 {
+  background: linear-gradient(to right, #08c200 51%, #dbdbdb 49%);
+}
+
+.percent_52 {
+  background: linear-gradient(to right, #08c200 52%, #dbdbdb 48%);
+}
+
+.percent_53 {
+  background: linear-gradient(to right, #08c200 53%, #dbdbdb 47%);
+}
+
+.percent_54 {
+  background: linear-gradient(to right, #08c200 54%, #dbdbdb 46%);
+}
+
+.percent_55 {
+  background: linear-gradient(to right, #08c200 55%, #dbdbdb 45%);
+}
+
+.percent_56 {
+  background: linear-gradient(to right, #08c200 56%, #dbdbdb 44%);
+}
+
+.percent_57 {
+  background: linear-gradient(to right, #08c200 57%, #dbdbdb 43%);
+}
+
+.percent_58 {
+  background: linear-gradient(to right, #08c200 58%, #dbdbdb 42%);
+}
+
+.percent_59 {
+  background: linear-gradient(to right, #08c200 59%, #dbdbdb 41%);
+}
+
+.percent_60 {
+  background: linear-gradient(to right, #08c200 60%, #dbdbdb 40%);
+}
+
+.percent_61 {
+  background: linear-gradient(to right, #08c200 61%, #dbdbdb 39%);
+}
+
+.percent_62 {
+  background: linear-gradient(to right, #08c200 62%, #dbdbdb 38%);
+}
+
+.percent_63 {
+  background: linear-gradient(to right, #08c200 63%, #dbdbdb 37%);
+}
+
+.percent_64 {
+  background: linear-gradient(to right, #08c200 64%, #dbdbdb 36%);
+}
+
+.percent_65 {
+  background: linear-gradient(to right, #08c200 65%, #dbdbdb 35%);
+}
+
+.percent_66 {
+  background: linear-gradient(to right, #08c200 66%, #dbdbdb 34%);
+}
+
+.percent_67 {
+  background: linear-gradient(to right, #08c200 67%, #dbdbdb 33%);
+}
+
+.percent_68 {
+  background: linear-gradient(to right, #08c200 68%, #dbdbdb 32%);
+}
+
+.percent_69 {
+  background: linear-gradient(to right, #08c200 69%, #dbdbdb 31%);
+}
+
+.percent_70 {
+  background: linear-gradient(to right, #08c200 70%, #dbdbdb 30%);
+}
+
+.percent_71 {
+  background: linear-gradient(to right, #08c200 71%, #dbdbdb 29%);
+}
+
+.percent_72 {
+  background: linear-gradient(to right, #08c200 72%, #dbdbdb 28%);
+}
+
+.percent_73 {
+  background: linear-gradient(to right, #08c200 73%, #dbdbdb 27%);
+}
+
+.percent_74 {
+  background: linear-gradient(to right, #08c200 74%, #dbdbdb 26%);
+}
+
+.percent_75 {
+  background: linear-gradient(to right, #08c200 75%, #dbdbdb 25%);
+}
+
+.percent_76 {
+  background: linear-gradient(to right, #08c200 76%, #dbdbdb 24%);
+}
+
+.percent_77 {
+  background: linear-gradient(to right, #08c200 77%, #dbdbdb 23%);
+}
+
+.percent_78 {
+  background: linear-gradient(to right, #08c200 78%, #dbdbdb 22%);
+}
+
+.percent_79 {
+  background: linear-gradient(to right, #08c200 79%, #dbdbdb 21%);
+}
+
+.percent_80 {
+  background: linear-gradient(to right, #08c200 80%, #dbdbdb 20%);
+}
+
+.percent_81 {
+  background: linear-gradient(to right, #08c200 81%, #dbdbdb 19%);
+}
+
+.percent_82 {
+  background: linear-gradient(to right, #08c200 82%, #dbdbdb 18%);
+}
+
+.percent_83 {
+  background: linear-gradient(to right, #08c200 83%, #dbdbdb 17%);
+}
+
+.percent_84 {
+  background: linear-gradient(to right, #08c200 84%, #dbdbdb 16%);
+}
+
+.percent_85 {
+  background: linear-gradient(to right, #08c200 85%, #dbdbdb 15%);
+}
+
+.percent_86 {
+  background: linear-gradient(to right, #08c200 86%, #dbdbdb 14%);
+}
+
+.percent_87 {
+  background: linear-gradient(to right, #08c200 87%, #dbdbdb 13%);
+}
+
+.percent_88 {
+  background: linear-gradient(to right, #08c200 88%, #dbdbdb 12%);
+}
+
+.percent_89 {
+  background: linear-gradient(to right, #08c200 89%, #dbdbdb 11%);
+}
+
+.percent_90 {
+  background: linear-gradient(to right, #08c200 90%, #dbdbdb 10%);
+}
+
+.percent_91 {
+  background: linear-gradient(to right, #08c200 91%, #dbdbdb 9%);
+}
+
+.percent_92 {
+  background: linear-gradient(to right, #08c200 92%, #dbdbdb 8%);
+}
+
+.percent_93 {
+  background: linear-gradient(to right, #08c200 93%, #dbdbdb 7%);
+}
+
+.percent_94 {
+  background: linear-gradient(to right, #08c200 94%, #dbdbdb 6%);
+}
+
+.percent_95 {
+  background: linear-gradient(to right, #08c200 95%, #dbdbdb 5%);
+}
+
+.percent_96 {
+  background: linear-gradient(to right, #08c200 96%, #dbdbdb 4%);
+}
+
+.percent_97 {
+  background: linear-gradient(to right, #08c200 97%, #dbdbdb 3%);
+}
+
+.percent_98 {
+  background: linear-gradient(to right, #08c200 98%, #dbdbdb 2%);
+}
+
+.percent_99 {
+  background: linear-gradient(to right, #08c200 99%, #dbdbdb 1%);
+}
+
+.percent_100 {
+  background: linear-gradient(to right, #08c200 100%, #dbdbdb 0%);
 }
